@@ -5,21 +5,31 @@ import { useState, useEffect } from "react";
 
 const slides = [
   {
-    url: "/promo.webp",
+    urlDesktop: "/promo.webp",
+    urlMobile: "/promo-mobile.webp",
     alt: "Kacamata Fashion",
   },
   {
-    url:"/Optik.webp",
+    urlDesktop: "/Optik.webp",
+    urlMobile: "/Optik-mobile.webp",
     alt: "Kacamata Premium",
   },
   {
-    url: "/Gratis.webp",
+    urlDesktop: "/Gratis.webp",
+    urlMobile: "/Gratis-mobile.webp",
     alt: "Kacamata Modern",
   },
 ];
 
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -34,16 +44,22 @@ const HeroSection = () => {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className="absolute inset-0 transition-opacity duration-1000"
+          className="absolute inset-0"
           style={{
             opacity: index === current ? 1 : 0,
-            backgroundImage: `url(${slide.url})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            transform: index === current ? "scale(1.05)" : "scale(1)",
-            transition: "opacity 1s ease, transform 6s ease",
+            transition: "opacity 1s ease",
           }}
-        />
+        >
+          <img
+            src={isMobile ? slide.urlMobile : slide.urlDesktop}
+            alt={slide.alt}
+            className="h-full w-full object-cover object-center"
+            style={{
+              transform: index === current ? "scale(1.05)" : "scale(1)",
+              transition: "transform 6s ease",
+            }}
+          />
+        </div>
       ))}
 
       {/* Overlay */}
@@ -75,13 +91,26 @@ const HeroSection = () => {
             untuk penglihatan sempurna Anda.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button
+              asChild
+              size="lg"
+              className="bg-accent text-accent-foreground hover:bg-accent/90"
+            >
               <Link to="/koleksi">
                 Lihat Koleksi <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
-              <a href="https://wa.me/628123456789" target="_blank" rel="noopener noreferrer">
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-white/30 text-white hover:bg-white/10"
+            >
+              <a
+                href="https://wa.me/628123456789"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <MessageCircle className="mr-2 h-4 w-4" /> Konsultasi Optik
               </a>
             </Button>
