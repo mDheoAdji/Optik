@@ -8,6 +8,8 @@ import KoleksiPage from "./pages/KoleksiPage";
 import WarnaPage from "./pages/WarnaPage";
 import TentangPage from "./pages/TentangPage";
 import KontakPage from "./pages/KontakPage";
+import KenapaP from "./pages/kenapaP";
+import ProductDetailPage from "./pages/ProductDetailPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +26,8 @@ const App = () => (
           <Route path="/warna/:warna" element={<WarnaPage />} />
           <Route path="/tentang" element={<TentangPage />} />
           <Route path="/kontak" element={<KontakPage />} />
+          <Route path="/kenapaP" element={<KenapaP />} />
+          <Route path="/produk/:id" element={<ProductDetailPage/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

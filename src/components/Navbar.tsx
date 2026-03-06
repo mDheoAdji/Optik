@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Glasses } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/koleksi", label: "Koleksi Kacamata" },
   { to: "/warna/hitam", label: "Warna Kacamata" },
-  { to: "/tentang", label: "Tentang Kami" },
+  { to: "/kenapaP", label: "Tentang Kami" },
   { to: "/kontak", label: "Kontak" },
 ];
 
@@ -18,10 +18,30 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-lg">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-2">
-          <Glasses className="h-8 w-8 text-[#8B5E3C" />
-          <span className="font-['Playfair_Display'] text-xl font-bold text-foreground">
-            Mega Optik
+        <Link to="/" className="flex items-center gap-2 select-none">
+          {/* Icon SVG kacamata custom */}
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="9" width="10" height="10" rx="5" stroke="#8B5E3C" strokeWidth="2"/>
+            <rect x="17" y="9" width="10" height="10" rx="5" stroke="#8B5E3C" strokeWidth="2"/>
+            <path d="M11 14h6" stroke="#8B5E3C" strokeWidth="2" strokeLinecap="round"/>
+            <path d="M1 14 Q0 10 0 10" stroke="#8B5E3C" strokeWidth="2" strokeLinecap="round"/>
+            <path d="M27 14 Q28 10 28 10" stroke="#8B5E3C" strokeWidth="2" strokeLinecap="round"/>
+          </svg>
+
+          {/* Logo teks: MEGA bold + OPTIK tipis */}
+          <span className="flex items-baseline gap-[3px] tracking-wide">
+            <span
+              className="text-xl font-black uppercase text-foreground"
+              style={{ fontFamily: "'Inter', 'DM Sans', sans-serif", letterSpacing: "0.08em" }}
+            >
+              MEGA
+            </span>
+            <span
+              className="text-xl font-light uppercase text-[#8B5E3C]"
+              style={{ fontFamily: "'Inter', 'DM Sans', sans-serif", letterSpacing: "0.18em" }}
+            >
+              OPTIK
+            </span>
           </span>
         </Link>
 

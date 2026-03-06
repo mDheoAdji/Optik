@@ -81,7 +81,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 flex h-full items-center justify-center px-4">
         <div className="text-center">
-          <h1 className="mb-6 text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+          {/* <h1 className="mb-6 text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
             Lihat Dunia Lebih Jelas
             <br />
             <span className="text-accent">dengan Kacamata Berkualitas</span>
@@ -89,8 +89,8 @@ const HeroSection = () => {
           <p className="mx-auto mb-10 max-w-2xl text-lg text-white/80 sm:text-xl">
             Menampilkan koleksi kacamata modern dan layanan optik profesional
             untuk penglihatan sempurna Anda.
-          </p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          </p> */}
+          {/* <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button
               asChild
               size="lg"
@@ -114,7 +114,7 @@ const HeroSection = () => {
                 <MessageCircle className="mr-2 h-4 w-4" /> Konsultasi Optik
               </a>
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

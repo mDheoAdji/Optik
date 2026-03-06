@@ -11,14 +11,25 @@ const GlassesSection = () => {
     <section className="px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 text-center">
-          <h2 className="mb-3 text-3xl font-bold text-foreground sm:text-4xl">
-            Pilihan Kacamata
-          </h2>
-          <p className="mx-auto max-w-xl text-muted-foreground" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+          {/* Judul dengan garis kiri-kanan */}
+          <div className="flex items-center justify-center gap-4 mb-3">
+            <span className="h-px w-16 bg-foreground/40" />
+            <h2
+              className="text-2xl font-black uppercase tracking-[0.2em] text-foreground sm:text-3xl"
+              style={{ fontFamily: "'Inter', 'DM Sans', sans-serif" }}
+            >
+              Pilihan Kacamata
+            </h2>
+            <span className="h-px w-16 bg-foreground/40" />
+          </div>
+          <p
+            className="mx-auto max-w-xl text-sm text-muted-foreground italic"
+            style={{ fontFamily: "'DM Sans', sans-serif" }}
+          >
             Temukan kacamata yang sempurna dari berbagai kategori: Fashion, Minus, Anti Radiasi, Komputer, dan Anak.
           </p>
         </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-3">
           {featured.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

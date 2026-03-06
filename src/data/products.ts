@@ -42,7 +42,7 @@ export const glasses: Product[] = [
     category: "Komputer",
     color: "Biru",
     description: "Nyaman dipakai berlama-lama di depan komputer",
-    image: "https://images.unsplash.com/photo-1483120335023-22790ab58598?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400&h=300&fit=crop",
     price: "Rp 420.000",
   },
   {
@@ -51,7 +51,7 @@ export const glasses: Product[] = [
     category: "Anak",
     color: "Biru",
     description: "Frame fleksibel dan aman untuk anak-anak",
-    image: "https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=400&h=300&fit=crop",
     price: "Rp 300.000",
   },
   {
@@ -158,7 +158,7 @@ export const accessories: Product[] = [
     name: "LensClear Spray",
     category: "Cairan Pembersih",
     description: "Cairan pembersih lensa anti-fog 100ml",
-    image: "https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=400&h=300&fit=crop",
     price: "Rp 45.000",
   },
 ];
