@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Glasses, Instagram, Mail, Phone } from "lucide-react";
+
+
 const phone = import.meta.env.VITE_WHATSAPP_NUMBER;
 const email = import.meta.env.VITE_EMAIL;
 
@@ -11,7 +13,7 @@ const Footer = () => {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('/public/footer.webp')",
+          backgroundImage: "url('/footer.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

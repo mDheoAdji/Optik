@@ -5,15 +5,15 @@ import { useState, useEffect } from "react";
 
 const slides = [
   {
-    url: "/public/promo.webp",
+    url: "/promo.webp",
     alt: "Kacamata Fashion",
   },
   {
-    url:"/public/Optik.webp",
+    url:"/Optik.webp",
     alt: "Kacamata Premium",
   },
   {
-    url: "/public/Gratis.webp",
+    url: "/Gratis.webp",
     alt: "Kacamata Modern",
   },
 ];
