@@ -2,12 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-const STATS = [
-  { value: "15+", label: "Tahun Pengalaman" },
-  { value: "10.000+", label: "Pelanggan Puas" },
-  { value: "50+", label: "Brand Tersedia" },
-  { value: "100%", label: "Produk Original" },
-];
+
 
 const TEAM = [
   { name: "Dr. Budi Santoso", role: "Optometris Senior", img: "https://i.pravatar.cc/150?img=11" },
